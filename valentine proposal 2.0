@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffcccb;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #e60000;
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #4CAF50;
+        }
+        .no {
+            background-color: #f44336;
+        }
+        #response {
+            font-size: 1.5em;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Will You Be My Valentine?</h1>
+        <p>Click "Yes" or "No" to answer!</p>
+        <button class="btn yes" onclick="showResponse('Yes! ❤️')">Yes</button>
+        <button class="btn no" onclick="showResponse('No! 💔')">No</button>
+        <p id="response"></p>
+    </div>
+
+    <script>
+        function showResponse(answer) {
+            var responseElement = document.getElementById('response');
+            responseElement.textContent = answer;
+            responseElement.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
